@@ -1,0 +1,68 @@
+<h1>Common Pipes</h1>
+<p>
+  Pipes included in Angular - Usually in Common Module
+</p>
+
+<div class="grid">
+  <div class="col-4">
+    <p-card header="uppercase" subheader="example"
+      >{{ 'example' | uppercase }}</p-card
+    >
+  </div>
+  <div class="col-4">
+    <p-card header="lowercase" subheader="EXAMPLE"
+      >{{ 'EXAMPLE' | lowercase}}</p-card
+    >
+  </div>
+  <div class="col-4">
+    <p-card header="tilecase" subheader="sImpLe exAmpLE"
+      >{{ 'sImpLe exAmpLE' | titlecase}}</p-card
+    >
+  </div>
+</div>
+
+<h1>Date | Pipe</h1>
+<p>
+  Pipe witch format dates
+</p>
+<div class="grid">
+  <div class="col-6">
+    <p-card>
+      <ul>
+        <li>dateVar</li>
+        <li>dateVar | date</li>
+        <li>dateVar | date:'short'</li>
+        <li>dateVar | date:'long'</li>
+        <li>dateVar | date:'MMMM'</li>
+        <li>dateVar | date:'MMMM dd, yyyy'</li>
+      </ul>
+
+      <hr />
+      <ul>
+        <li>dateVar | date:'long':'GMT-6'</li>
+        <li>dateVar | date:'long':'GMT-4'</li>
+        <li></li>
+      </ul>
+    </p-card>
+  </div>
+
+  <div class="col-6">
+    <p-card>
+      <ul>
+        <li>{{ dateVar }}</li>
+        <li>{{ dateVar | date }}</li>
+        <li>{{ dateVar | date:'short' }}</li>
+        <li>{{ dateVar | date:'long' }}</li>
+        <li>{{ dateVar | date:'MMMM' }}</li>
+        <li>{{ dateVar | date:'MMMM dd, yyyy' }}</li>
+      </ul>
+
+      <hr />
+      <ul>
+        <li>{{ dateVar | date:'long':'GMT-6' }}</li>
+        <li>{{ dateVar | date:'long':'GMT-4' }}</li>
+        <li>(locale changed globally in app.module</li>
+      </ul>
+    </p-card>
+  </div>
+</div>
