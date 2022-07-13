@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { MenuItem } from "primeng/api";
+import { PrimeNGConfig } from "primeng/api";
 
 @Component({
   selector: "app-menu",
@@ -9,7 +10,9 @@ import { MenuItem } from "primeng/api";
 export class MenuComponent implements OnInit {
   items: MenuItem[] = [];
 
-  constructor() {}
+  constructor(private primeNgConfig: PrimeNGConfig) {
+    this.primeNgConfig.ripple = true;
+  }
 
   ngOnInit(): void {
     this.items = [
@@ -33,6 +36,10 @@ export class MenuComponent implements OnInit {
             routerLink: "not-commons",
           },
         ],
+      },
+      {
+        label: "Custom Pipes",
+        icon: "pi pi-sliders-h",
       },
     ];
   }
